@@ -15,11 +15,26 @@ body {
   color: white !important;
 }
 
-@media screen and (max-width : 512px) {
+@media screen and (max-width : 550px) {
   .cards {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: stretch;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: stretch !important;
   }
+}
+
+.upper-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+/* @media screen and (max-width : 750) {
+  .upper-container {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+} */
+.right-side {
+  margin-right: 20%;
 }

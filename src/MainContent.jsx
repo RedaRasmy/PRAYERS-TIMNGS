@@ -85,25 +85,20 @@ export default function MainContent() {
 
     return (
     <>
-        <Grid container >
-            <Grid size={6}>
-                <div>
-                    <h2>{getDate()}</h2>
-                    <h1>{city}</h1>
-                </div>
-            </Grid>
-
-            <Grid size={6}>
-                <div>
-                    <h2>
-                        {'time left to salat ' + array[1] + " :"}
-                    </h2>
-                    <h1>
-                        {array[0]}
-                    </h1>
-                </div>
-            </Grid>
-        </Grid>
+        <div className='upper-container'>
+            <div className='right-side'>
+                <h2>{getDate()}</h2>
+                <h1>{city}</h1>
+            </div>
+            <div>
+                <h2>
+                    {'time left to salat ' + array[1] + " :"}
+                </h2>
+                <h1>
+                    {array[0]}
+                </h1>
+            </div>
+        </div>
         <hr style={{opacity:0.1}}></hr>
         <Stack 
             className='cards'
