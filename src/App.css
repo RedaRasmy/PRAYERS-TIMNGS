@@ -3,9 +3,16 @@
 html {
   font-family:cursive !important
 }
+#root {
+  width: 90%;
+}
+
 body {
-  background-color:rgb(36, 26, 12);
-  margin: 100px 100px 0px 100px
+  background-color:#343131;
+  /* margin: 100px 100px 0px 100px; */
+  /* width: auto; */
+  display: flex;
+  justify-content: center;
 }
 
 .MuiOutlinedInput-notchedOutline {
@@ -15,12 +22,15 @@ body {
   color: white !important;
 }
 
-@media screen and (max-width : 550px) {
+@media screen and (min-width : 1240px) {
   .cards {
     display: flex !important;
-    flex-direction: column !important;
+    flex-direction: row !important;
     align-items: stretch !important;
     justify-content: stretch !important;
+  }
+  .prayersTable {
+    display: none !important;
   }
 }
 

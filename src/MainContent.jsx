@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
-import Grid from '@mui/material/Grid2';
 import Stack from '@mui/material/Stack';
-import Prayer from './Prayer';
 import Select from '@mui/material/Select';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import axios from 'axios';
+import PrayersTable from './PrayersTable';
+import Cards from './Cards';
 
 
 
@@ -77,7 +77,10 @@ export default function MainContent() {
         const minutesLeft =  Math.abs(test)
 
         // console.log(`${hoursLeft}:${minutesLeft}`)
-        const countDown = `${hoursLeft}:${minutesLeft}:${seconds}`
+        function convertToTime(num) {
+            return String(num).padStart(2,'0')
+        }
+        const countDown = `${convertToTime(hoursLeft)}:${convertToTime(minutesLeft)}:${convertToTime(seconds)}`
         const nextPrayer = getPrayer(nextPrayerTiming)
         return [countDown,nextPrayer]
     }
@@ -99,46 +102,13 @@ export default function MainContent() {
                 </h1>
             </div>
         </div>
-        <hr style={{opacity:0.1}}></hr>
-        <Stack 
-            className='cards'
-            direction={'row-reverse'}
-            flexWrap={'wrap'}
-            justifyContent={'center'}
-            style={{
-                display:'flex',
-                marginTop:'20px'
-                }}>
-            <Prayer 
-                imgUrl='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5T5X8qvNDFM9GxOq9irfqrTi-8LwLMbP6tA&s'
-                title='الفجر'
-                time={timings.Fajr}
-
-            />
-            <Prayer
-                imgUrl='https://www.islamiclandmarks.com/wp-content/uploads/2023/05/masjid_al_aqsa_front_door.jpg'
-                title='الظهر'
-                time={timings.Dhuhr}
-
-            />
-            <Prayer
-                imgUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-gYcPB4RApfb97NkJ06sBtVWunaxVohmGRw&s"
-                title="العصر"
-                time={timings.Asr}
-            />
-            <Prayer
-                imgUrl="https://pics.craiyon.com/2023-09-29/8e5808622f2146f2996f203a0fc45890.webp"
-                title="المغرب"
-                time={timings.Maghrib}
-            />
-            <Prayer
-                imgUrl='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST2sw4JtQakToDF2EiFxYqjHV_hQcAZqzr5A&s'
-                title="العشاء"
-                time={timings.Isha}
-            />
-        </Stack>
+        <hr style={{opacity:0.1,width:'100%'}}></hr>
+        <Cards 
+        timings={timings} 
+        displayProp={false}
+        />
         <Stack justifyContent={'center'} alignItems={'center'} style={{margin:'40px'}}>
-            <FormControl style={{width:'20%'}}>
+            <FormControl style={{width:'20%' , minWidth:'150px'}}>
                 <InputLabel id="demo-simple-select-label"> 
                     <span style={{color:'white'}}>
                         City
@@ -159,6 +129,15 @@ export default function MainContent() {
                 </Select>
             </FormControl>
         </Stack>
+        <div 
+            className='prayersTable'
+            style={{margin:'30px 40px 50px 40px',display:'flex',justifyContent:'center'}}
+        >
+            <PrayersTable
+                className='prayersTable'
+                timings={timings}
+            />
+        </div> 
     </>
 )
 }
