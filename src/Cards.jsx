@@ -2,19 +2,16 @@ import { Stack } from "@mui/material"
 import Prayer from './Prayer';
 
 
-export default function Cards({timings,displayProp}) {
-  const displayOrder = displayProp? 'flex':'none'
+export default function Cards({timings}) {
   return (
     <>
         <Stack 
             className='cards'
+            display={'none'}
             direction={'row-reverse'}
             flexWrap={'wrap'}
-            justifyContent={'center'}
-            style={{
-                display:displayOrder,
-                marginTop:'20px'
-                }}>
+            justifyContent={'start'}
+            >
             <Prayer 
                 imgUrl='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5T5X8qvNDFM9GxOq9irfqrTi-8LwLMbP6tA&s'
                 title='الفجر'

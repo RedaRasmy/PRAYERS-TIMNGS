@@ -107,7 +107,7 @@ export default function MainContent() {
         timings={timings} 
         displayProp={false}
         />
-        <Stack justifyContent={'center'} alignItems={'center'} style={{margin:'40px'}}>
+        <Stack justifyContent={'center'} alignItems={'center'} style={{margin:'10px',marginBottom:'-10px'}}>
             <FormControl style={{width:'20%' , minWidth:'150px'}}>
                 <InputLabel id="demo-simple-select-label"> 
                     <span style={{color:'white'}}>
@@ -126,6 +126,7 @@ export default function MainContent() {
                     >
                     <MenuItem value={"Midelt"}>Midelt</MenuItem>
                     <MenuItem value={"Mohammadia"}>mohammadia</MenuItem>
+                    <MenuItem value={"Casablanca"}>Casablanca</MenuItem>
                 </Select>
             </FormControl>
         </Stack>
@@ -136,6 +137,7 @@ export default function MainContent() {
             <PrayersTable
                 className='prayersTable'
                 timings={timings}
+    
             />
         </div> 
     </>

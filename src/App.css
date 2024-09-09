@@ -6,11 +6,8 @@ html {
 #root {
   width: 90%;
 }
-
 body {
   background-color:#343131;
-  /* margin: 100px 100px 0px 100px; */
-  /* width: auto; */
   display: flex;
   justify-content: center;
 }
@@ -26,8 +23,8 @@ body {
   .cards {
     display: flex !important;
     flex-direction: row !important;
-    align-items: stretch !important;
-    justify-content: stretch !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
   .prayersTable {
     display: none !important;
@@ -48,3 +45,4 @@ body {
 .right-side {
   margin-right: 20%;
 }
+

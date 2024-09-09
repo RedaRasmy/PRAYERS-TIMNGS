@@ -18,7 +18,7 @@ export default function PrayersTable({timings}) {
 
   return (
     <TableContainer 
-    component={Paper} 
+    component={Paper}
     style={{width:"100%",borderRadius:'15px',}}
     >
       <Table sx={{ width:'100%',backgroundColor:'#821131',}} aria-label="simple table">
