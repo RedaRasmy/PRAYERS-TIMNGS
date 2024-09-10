@@ -87,13 +87,13 @@ export default function MainContent() {
     return (
     <>
         <div className='upper-container'>
-            <div className='upper right-side'>
+            {/* <div className='upper right-side'>
                 <h2 className='upper date' >{getDate()}</h2>
                 <h1 className='upper city'>{city}</h1>
-            </div>
+            </div> */}
             <div className='upper'>
                 <h2 className='upper time-left'>
-                    {'time left for'} <span className='salat'> {array[1]} </span> { "prayer :"}
+                    {'Time left for'} <span className='salat'> {array[1]} </span> { "prayer :"}
                 </h2 >
                 <h1 className='upper countDown'>
                     {array[0]}

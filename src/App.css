@@ -32,6 +32,9 @@ body {
   .city , .date{
     display: none;
   }
+  .time-left {
+    word-spacing: -4px;
+  }
 }
 @media screen and (min-width : 1240px) {
   .cards {
