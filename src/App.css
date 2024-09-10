@@ -78,4 +78,13 @@ body {
 .right-side {
   margin-right: 20%;
 }
-
+.countDown {
+  text-align: center;
+  margin-left: -7px;
+}
+.salat {
+  color: #821131;
+  font-weight:600;
+  /* margin-left: -3px;
+  margin-right: -3px; */
+}

@@ -93,9 +93,9 @@ export default function MainContent() {
             </div>
             <div className='upper'>
                 <h2 className='upper time-left'>
-                    {'time left to salat ' + array[1] + " :"}
+                    {'time left for'} <span className='salat'> {array[1]} </span> { "prayer :"}
                 </h2 >
-                <h1 className='upper'>
+                <h1 className='upper countDown'>
                     {array[0]}
                 </h1>
             </div>
