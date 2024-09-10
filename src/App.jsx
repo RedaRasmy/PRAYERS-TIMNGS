@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <div 
-        style={{display:'flex',justifyContent:'center',width:'100%',flexDirection:'column'}}>
+        style={{display:'flex',justifyContent:'center',width:'100%',flexDirection:'column',alignItems:'center'}}>
         <MainContent/>
       </div>
     </>

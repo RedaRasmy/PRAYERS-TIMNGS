@@ -130,7 +130,7 @@ export default function MainContent() {
         </Stack>
         <div 
             className='prayersTable'
-            style={{margin:'30px 40px 50px 40px',display:'flex',justifyContent:'center'}}
+            style={{margin:'30px 40px 0px 40px',display:'flex',justifyContent:'center',width:'90%'}}
         >
             <PrayersTable
                 className='prayersTable'
