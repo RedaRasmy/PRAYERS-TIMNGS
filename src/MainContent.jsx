@@ -30,7 +30,7 @@ export default function MainContent() {
 
     useEffect( () => {
         getTimings()
-    } )
+    } ,[timings])
     
 
 
@@ -125,6 +125,8 @@ export default function MainContent() {
                     <MenuItem value={"Midelt"}>Midelt</MenuItem>
                     <MenuItem value={"Mohammadia"}>mohammadia</MenuItem>
                     <MenuItem value={"Casablanca"}>Casablanca</MenuItem>
+                    <MenuItem value={"Tangier"}>Tangier</MenuItem>
+                    <MenuItem value={"Marrakesh"}>Marrakesh</MenuItem>
                 </Select>
             </FormControl>
         </Stack>
