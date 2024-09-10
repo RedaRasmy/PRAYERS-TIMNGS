@@ -71,12 +71,10 @@ export default function MainContent() {
                     return true
                 }
         })
-        const nextPrayerTiming = nextPrayerArray[0]
+        const nextPrayerTiming = nextPrayerArray[0] ? nextPrayerArray[0] : nextPrayerArray[4]
         const hoursLeft = parseInt(nextPrayerTiming) - hour
         const test = parseInt(nextPrayerTiming.slice(3)) - minute
         const minutesLeft =  Math.abs(test)
-
-        // console.log(`${hoursLeft}:${minutesLeft}`)
         function convertToTime(num) {
             return String(num).padStart(2,'0')
         }
@@ -89,15 +87,15 @@ export default function MainContent() {
     return (
     <>
         <div className='upper-container'>
-            <div className='right-side'>
-                <h2>{getDate()}</h2>
-                <h1>{city}</h1>
+            <div className='upper right-side'>
+                <h2 className='upper date' >{getDate()}</h2>
+                <h1 className='upper city'>{city}</h1>
             </div>
-            <div>
-                <h2>
+            <div className='upper'>
+                <h2 className='upper time-left'>
                     {'time left to salat ' + array[1] + " :"}
-                </h2>
-                <h1>
+                </h2 >
+                <h1 className='upper'>
                     {array[0]}
                 </h1>
             </div>

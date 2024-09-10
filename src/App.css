@@ -7,9 +7,12 @@ html {
   width: 90%;
 }
 body {
-  background-color:#343131;
+  background-color:#1f313d;
   display: flex;
   justify-content: center;
+}
+.time-left{
+  text-decoration: underline 2px rgba(255, 255, 255, 0.486);
 }
 
 .MuiOutlinedInput-notchedOutline {
@@ -18,7 +21,18 @@ body {
 .MuiSvgIcon-root {
   color: white !important;
 }
-
+@media screen and (max-width : 400px) {
+  .right-side {
+    margin-top : -0px
+  }
+  .upper {
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
+  .city , .date{
+    display: none;
+  }
+}
 @media screen and (min-width : 1240px) {
   .cards {
     display: flex !important;
@@ -30,6 +44,25 @@ body {
     display: none !important;
   }
 }
+@media screen and (min-width: 401px) {
+  .upper {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .right-side {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width:540px){
+  .right-side {
+    margin-bottom: 0px;
+  }
+  .date , .city {
+    display: none
+  }
+}
+
+
 
 .upper-container {
   display: flex;
